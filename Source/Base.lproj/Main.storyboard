@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y9n-3V-Se3">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WzM-d6-Jzv">
+            <objects>
+                <navigationController id="Y9n-3V-Se3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gzp-nc-Gia">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2627450980392157" green="0.60784313725490191" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0PH-Kh-abc" kind="relationship" relationship="rootViewController" id="g3b-yd-lis"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnr-3F-cMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="-128"/>
+        </scene>
+        <!--App Auth Example View Controller-->
+        <scene sceneID="MSK-bT-qb2">
+            <objects>
+                <viewController id="0PH-Kh-abc" customClass="AppAuthExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nd0-IK-b4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQf-X1-NAf">
+                                <rect key="frame" x="16" y="120" width="292" height="428"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obJ-Tk-c6j">
+                                <rect key="frame" x="13" y="39" width="295" height="73"/>
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.29019607843137252" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="u7F-uV-aZq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login With Svipe">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="authWithAutoCodeExchange:" destination="0PH-Kh-abc" eventType="touchUpInside" id="RHK-WH-W7c"/>
+                                    <action selector="autoAutorize:" destination="Ngk-Gu-KKv" eventType="touchUpInside" id="8rP-n0-wCY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J0c-6M-Zog"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="obJ-Tk-c6j" firstAttribute="centerX" secondItem="nd0-IK-b4Q" secondAttribute="centerX" id="DIX-7b-s2Y"/>
+                            <constraint firstItem="J0c-6M-Zog" firstAttribute="trailing" secondItem="obJ-Tk-c6j" secondAttribute="trailing" constant="12" id="GAy-zQ-3ws"/>
+                            <constraint firstItem="aQf-X1-NAf" firstAttribute="leading" secondItem="nd0-IK-b4Q" secondAttribute="leadingMargin" id="Q0M-1L-Ssz"/>
+                            <constraint firstItem="obJ-Tk-c6j" firstAttribute="top" secondItem="nd0-IK-b4Q" secondAttribute="topMargin" constant="-25" id="lcn-f5-cID"/>
+                            <constraint firstItem="aQf-X1-NAf" firstAttribute="top" secondItem="obJ-Tk-c6j" secondAttribute="bottom" constant="8" id="xUO-vj-Y27"/>
+                            <constraint firstItem="obJ-Tk-c6j" firstAttribute="trailing" secondItem="aQf-X1-NAf" secondAttribute="trailing" id="y8q-6X-P5F"/>
+                            <constraint firstItem="J0c-6M-Zog" firstAttribute="bottom" secondItem="aQf-X1-NAf" secondAttribute="bottom" constant="20" id="zpb-Oy-cMu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aGf-MP-jNh"/>
+                    <connections>
+                        <outlet property="authAutoButton" destination="obJ-Tk-c6j" id="BKJ-8d-Qzd"/>
+                        <outlet property="userInfoLabel" destination="aQf-X1-NAf" id="Aug-5H-DHs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93N-4y-Tz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ngk-Gu-KKv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="20.625" y="-129.92957746478874"/>
+        </scene>
+    </scenes>
+</document>
