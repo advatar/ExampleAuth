@@ -2,10 +2,7 @@
 
 ## Setup & Open the Project
 
-You'll need to have [Carthage](https://github.com/Carthage/Carthage) installed
-in order to pull the AppAuth dependency.
-
-So first run `carthage bootstrap` to build AppAuth framework then open the
+Just open the
 `Example.xcodeproj` file.
 
 ## Configuration
